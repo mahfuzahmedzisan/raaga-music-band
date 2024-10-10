@@ -279,22 +279,104 @@ footer p{
     color: var(--text-primary-color);
 }
 
-@media only screen and (max-width: 992px) {
-    .hero-section h5 span::after,
-    .hero-section h5 span::before {
-        display: none;
+/*    =============     About Page     =============    */
+.about-page{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/about_img.jpg) no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.team-section .team-member{
+    overflow: hidden;
+    border-radius: 0 50px 0 50px;
+}
+.team-section .content{
+    bottom: -100px;
+}
+.team-section .team-member:hover .content{
+    bottom: 10px;
+}
+.team-section .team-member:hover img{
+    filter: blur(.7px);
+    animation: shake .6s infinite;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0);
     }
 }
-@media only screen and (max-width: 767px) {
-    section{
-        padding: 30px 0;
+.team-section .content .name{
+    color: var(--text-secondary-color);
+    text-shadow: 5px 5px 1px #000;
+}
+
+/* ================= Contact Page =================== */
+
+.subscribe-seciton{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/about_img.jpg) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.subscribe-seciton form{
+    width: 90%;
+}
+
+.subscribe-seciton a{
+    background-color: var(--btn-primary-color);
+}
+@media (min-width: 576px) {
+    .subscribe-seciton form{
+        width: 60%;
     }
 }
-@media only screen and (max-width: 480px) {
-    .hero-section h3{
-        font-size: 1.6rem !important;
-    }
-    .hero-section h5{
-        font-size: .9rem !important;
-    }
+/* Contact Section  */
+
+.contact-section textarea{
+    min-height: 150px;
+}
+.contact-section .btn{
+    background-color: var(--btn-primary-color);
+}
+.contact-section .content p{
+    max-width: 250px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.contact-section .content a{
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-tertiary-color);
+    display: inline-block;
+}
+
+/* =========================== FAQ Page  ===================== */
+
+.banner-section{
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/header_img1.jpeg) no-repeat;
+    background-position: 80% 40%;
+    background-attachment: fixed;
+}
+.banner-section h4{
+    color: var(--text-secondary-color);
+    font-weight: 900;
+    font-size: 3rem;
+}
+.banner-section h4 a{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary-color);
+    text-transform: uppercase;
+}
+.banner-section h4 a:hover{
+    color: var(--text-tertiary-color);
 }
